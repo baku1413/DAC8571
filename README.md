@@ -1,4 +1,5 @@
-DAC8571 Arduino library
+# DAC8571 Arduino library
+
 
 Library for Texas Instruments Digital to Analog converter DAC8571
 
