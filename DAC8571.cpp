@@ -17,9 +17,9 @@
 		 Wire.begin();		 
 	 }
 	 
-	 void DAC8571::setVoltage(unsigned int value, bool updt)
+	 void DAC8571::setVoltage(uint16_t value, bool updt)
 	 {
-		unsigned int valoo = value;
+		uint16_t valoo = value;
 		if (valoo>=65535)
 		{
 			valoo=65535;
@@ -48,7 +48,7 @@
 		Wire.endTransmission();
 	 }
 	 
-	 int DAC8571::convert_value(unsigned int valoo, int bytee) 
+	 int DAC8571::convert_value(uint16_t valoo, int bytee) 
 	 {
 		int tab[4];
 		for (int i = 1; i>=0; i--) 

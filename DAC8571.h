@@ -14,11 +14,11 @@
 class DAC8571{
 	private:
 	 uint8_t address;
-	 unsigned int dac_value;
-	 unsigned int convert_value(unsigned int valoo, int bytee);
+	 uint16_t dac_value;
+	 int convert_value(uint16_t valoo, int bytee);
 	
 	public:
 	 void begin(uint8_t addr);
-	 void setVoltage(unsigned int value, bool updt);
+	 void setVoltage(uint16_t value, bool updt);
 	 void update();
 };
