@@ -1,0 +1,24 @@
+#if ARDUINO >= 100
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
+
+#include <Wire.h>
+
+#define DAC8571_C_setUpdate (0x10)
+#define DAC8571_C_set 		(0x00)
+#define DAC8571_C_Update 	(0x20)
+
+
+class DAC8571{
+	private:
+	 uint8_t address;
+	 unsigned int dac_value;
+	 unsigned int convert_value(unsigned int valoo, int bytee);
+	
+	public:
+	 void begin(uint8_t addr);
+	 void setVoltage(unsigned int value, bool updt);
+	 void update();
+};
